@@ -1,0 +1,548 @@
+/* comments written here */
+/* Google Fonts
+
+ font-family: 'Prompt', sans-serif;
+ font-family: 'Source Sans Pro', sans-serif;
+ font-family: 'Black Ops One', cursive;
+*/
+
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.background {
+	background-image: url("../images/black_pattern.jpg");
+	background-attachment: fixed;
+}
+
+
+/* main classes */
+.main_container {
+	overflow: hidden;
+	background: #000; /* black */
+	border-style: solid;
+	/* min-width: 1000px; */
+	/* min-height: 1000px; */
+	/* height: 1000px; */
+	width: 1000px;
+ 	margin: 0 auto; /* "auto" makes the left and right margins center the wrapper */
+}
+.masthead {
+	font-family: 'Black Ops One', cursive;
+	font-size: 50px;
+	height: 300px;
+	/* width: 1000px; */
+	background: #FAFAFA; /* white */
+	/* margin: 20px; */
+	overflow: hidden;
+	background-image: url("../images/animated-web-design-slideshow-background.gif"); 
+}
+
+/* 
+	http://www.w3schools.com/cssref/css3_pr_text-shadow.asp
+  	https://css-tricks.com/adding-stroke-to-web-text/
+  	http://stackoverflow.com/questions/7061420/how-do-i-animate-a-glowing-effect-on-text 
+ */
+.masthead h1 {
+	position: relative;
+	top: -50px;
+	text-align: center;
+	color: #0D16B2;
+
+  	/* Animate Text Color */
+  	/* animation: glowtext 1s infinite alternate; */
+  	text-shadow: 10px 10px 0px black;
+}
+.masthead h1:hover {
+	animation: glowtext 1s infinite alternate;
+}
+/* Different states of overriding the color of links */
+/* http://stackoverflow.com/questions/10312857/blue-and-purple-default-links-how-to-remove */
+.masthead a, .masthead a:visited, .masthead a:hover, .masthead a:focus, .masthead a:hover, .masthead a:active {
+	text-decoration: none;
+	color: #0D16B2; 
+}
+@keyframes glowtext {
+    to {
+    	text-shadow: 0px 0px 20px yellow;
+    }
+}
+
+
+
+
+.nav_both {
+	font-family: 'Prompt', sans-serif;
+	height: 50px;
+	/* width: 1000px; */
+	background: #333; /* grey */
+}
+.nav_left {
+	height: 50px;
+	width: 60%;
+	float: left;
+	/* background-color: blue; */
+}
+.nav_left a {
+	text-decoration: none; 
+	color: white;
+}
+.nav_right {
+	/* background-color: red; */
+	height: 50px;
+	width: 40%;
+	float: right;
+}
+.nav_right a {
+	text-decoration: none; 
+}
+
+
+/* .advertise_feed {
+	height: 100px;
+	min-width: 1000px;
+	background-color: orange;
+} */
+
+
+/* Google Search Bar */
+/* http://www.w3schools.com/howto/howto_css_animated_search.asp */
+.search_container {
+	/* background: black; */ 
+	width: 500px;
+	height: 50px;
+	float: right;
+	padding: 10px;
+}
+form {
+	/* background: red; */
+	float: right; 
+}
+.search_box {
+	width: 200px;
+	position: relative;
+	right: 5px;
+	-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+	border-radius: 10px;
+}
+input[type=text] {
+	background-color: white;
+	padding: 5px;
+	font-family: 'FontAwesome';
+}
+input[type=submit] {
+	position: relative; 
+	border: 1px solid black;
+	padding: 5px;
+}
+input[type=submit]:hover {
+	position: relative;
+	cursor: pointer;
+	background-color: green;
+}
+form:before {
+	/* background-color: orange; */
+    font-family: 'FontAwesome';
+    content: "\f002";
+    color: white;
+    position: relative;
+    left: -10px;
+}
+.fa-search:before {
+  content: "\f002";
+}
+
+
+
+
+.content_container { 
+	background: #FAFAFA; /* white */
+	min-width: 1000px;
+	min-height: 1000px;
+	padding: 20px;
+	background-image: url("../images/clouds.jpg"); 
+	overflow: hidden;
+
+/* Animation Settings */
+	background-position: 0px 0px;
+	background-repeat: repeat x y;
+	animation: animatedcontent 60s linear infinite; */
+}
+.content_container a {
+	text-decoration: none;
+}
+.content_container h1 {
+	font-family: 'Black Ops One', cursive;
+}
+/* Moving image from left to right */
+@keyframes animatedcontent {
+	from { 
+		background-position: 0 0; 
+	}
+	to { 
+		background-position: 100% 0; 
+	}
+}
+/* Moving image from top to bottom */
+/* @keyframes animatedmasthead {
+  0%   { 
+  	background-position: 0px; 
+  }
+  100% { 
+  	background-position: 0px 1000px; /* set this to the width of the image */
+ /* 	} 
+/* } */
+
+
+
+
+.code_box {
+	width: 500px;
+	padding: 10px;
+	margin: 20px;
+	background-color: grey;
+	border: 5px solid black;
+}
+/* Zoom in or grow image */
+/* https://designshack.net/articles/css/joshuajohnson-2/ */
+.grow img {
+	border: 10px solid #333; /* grey border */
+	-webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+.grow img:hover {
+	width: 640px;
+	height: 480px;
+}
+.top_page {
+	position: fixed;
+	top: 0px;
+	right: 5px;
+	height: 100px;
+	width: 100px;
+	/* background-color: yellow; */
+}
+.top_page a {
+	text-align: center;
+	text-decoration: none;
+}
+
+/* Media Links */
+.media_links {
+	font-family: 'Prompt', sans-serif;
+	height: 50px;
+	background: #333; /* grey */
+	text-align: center;
+	padding: 10px;
+	word-spacing: 5px;
+
+}
+.media_links a {
+	text-decoration: none;
+	color: white;
+}
+.fa-facebook-official:before {
+  	content: "\f230";
+  	color: #3b5998;
+}
+.fa-twitter:before {
+  	content: "\f099";
+  	color: #0084b4;
+}
+.fa-youtube:before {
+  	content: "\f167";
+  	color: #b31217;
+}
+.fa-twitch:before {
+  	content: "\f1e8";
+  	color: #6441a5;
+}
+.fa-instagram:before {
+  	content: "\f16d";
+  	color: #125688;
+}
+.fa-linkedin-square:before {
+ 	content: "\f08c";
+  	color: #0077B5;
+}
+
+
+/* non-classes */
+hr {
+	display: block;
+	border-width: 5px;
+}
+nav { 
+	margin: 0 auto; 
+	width: auto; 
+}
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	display: block;
+	background: #333; /* grey */
+}
+nav ul li {
+	list-style: none;
+	float: left;
+	display: list-item;
+	/* border-style: outset; */
+}
+nav ul li a {
+	display: block;
+	padding: 10px;	
+}
+/* Settings are exclusive to this class */
+.nav_left li a:hover {
+	background-color: #60FF19; /* green */
+	/* border-style: inset; */
+}
+/* Change this in order to change the Dropdown symbol */
+li > a:after { 
+	content: ''; 
+} 
+li > a:only-child:after { 
+	content: ''; 
+}  
+/* The Dropdown Styles */
+/* =================== */
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+}
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display: list-item;
+}
+/* First Tier Dropdown */
+nav ul ul li {
+	width: 300px;
+	float: none;
+	position: relative;
+	border-bottom: none;
+}
+footer {
+	/* position: relative; */
+	background: #FAFAFA; /* white */
+	height: 200px;
+	/* width: 1000px; */
+	/* bottom: 0; */
+	/* margin: 20px; */
+	font-family: 'Prompt', sans-serif;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	background-image: url("../images/grass_ground.jpg");
+}
+
+/* 
+
+http://www.w3schools.com/css/css3_animations.asp 
+http://www.w3schools.com/cssref/css3_pr_animation-direction.asp
+http://www.w3schools.com/css/css3_transitions.asp
+http://www.w3schools.com/cssref/pr_background-repeat.asp
+http://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+http://www.w3schools.com/css/css3_3dtransforms.asp
+http://www.w3schools.com/cssref/pr_border-style.asp
+http://www.w3schools.com/css/css_positioning.asp
+http://www.w3schools.com/css/css_image_transparency.asp
+http://stackoverflow.com/questions/24058861/css3-animation-vertical
+http://stackoverflow.com/questions/19351011/css3-save-position-after-animation
+
+*/
+
+.animation div {
+	width: 100px;
+	height: 100px;
+	/* background-color: red; */
+    position: relative;
+    /* Support for other browsers*/
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example 
+{
+    0%   {
+    	/* background-color:red; */
+    	left:0px; 
+    	top:0px;
+    }
+    25%  {
+    	/* background-color:yellow; */ 
+    	left:450px; 
+    	top:0px;
+    }
+    50%  {
+    	/* background-color:blue; */ 
+    	left:900px; 
+    	top:0px;
+    }
+    75%  {
+    	/* background-color:green; */
+    	left:500px; 
+    	top:0px;
+    }
+    100% {
+    	/* background-color:red; */ 
+    	left:0px; 
+    	top:0px;
+    }
+}
+/* Standard syntax */
+@keyframes example 
+{
+    0%   {
+    	/* background-color:red; */
+    	left:0px; 
+    	top:0px;
+    }
+    25%  {
+    	/* background-color:yellow; */ 
+    	left:450px; 
+    	top:0px;
+    }
+    50%  {
+    	/* background-color:blue; */ 
+    	left:900px; 
+    	top:0px;
+    }
+    75%  {
+    	/* background-color:green; */
+    	left:500px; 
+    	top:0px;
+    }
+    100% {
+    	/* background-color:red; */ 
+    	left:0px; 
+    	top:0px;
+    }
+    
+}
+
+
+
+
+
+/* Website Content Configurations */
+.home_page {
+	/* background-color: grey; */
+	overflow: hidden;
+	margin: 0px 20px 0px 10px;
+}
+.home_page_left {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	width: 600px;
+	min-height: 500px;
+	/* background: grey; */
+	border: solid black;
+	float: left;
+	padding: 0px 10px 0px 10px; 
+}
+.home_page_left h2 {
+	text-align: center;
+}
+.home_page_right {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	width: 300px;
+	min-height: 500px;
+	/* background: grey; */ 
+	border: solid black;
+	float: right;
+	padding: 0px 10px 0px 10px; 
+}
+.home_page_right h2 {
+	text-align: center;
+}
+.about_page {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	width: 900px;
+	min-height: 500px;
+	overflow: hidden;
+	/* background: grey; */
+	margin: 20px;
+	border: solid black;
+	padding: 0px 10px 0px 10px; 
+}
+.index_tutorials {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	width: 900px;
+	min-height: 500px;
+	overflow: hidden;
+	/* background: grey; */
+	margin: 20px;
+	/* border: solid black; */
+	padding: 0px 10px 0px 10px; 
+}
+.index_tutorials a {
+	text-decoration: none;
+	list-style: none;
+}
+.list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.csgo_tutorial {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	width: 900px;
+	min-height: 500px;
+	overflow: hidden;
+	/* background: grey; */
+	margin: 20px;
+	/* border: solid black; */
+	padding: 0px 10px 0px 10px; 
+}
+.news_page {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	width: 900px;
+	min-height: 500px;
+	overflow: hidden;
+	/* background: grey; */
+	margin: 20px;
+	border: solid black;
+	padding: 0px 10px 0px 10px; 
+}
+.faqs_page {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	width: 900px;
+	min-height: 500px;
+	overflow: hidden;
+	/* background: grey; */
+	margin: 20px;
+	border: solid black;
+	padding: 0px 10px 0px 10px; 
+}
+.contact_page {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px;
+	width: 900px;
+	min-height: 500px;
+	overflow: hidden;
+	/* background: grey; */ 
+	margin: 20px;
+	border: solid black;
+	padding: 0px 10px 0px 10px; 
+}
